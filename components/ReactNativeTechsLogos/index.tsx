@@ -1,15 +1,18 @@
-import { Container, Label } from './styled';
+import React from 'react';
+import { ContainerTechs, ContentTech, Label } from './styled';
 import { PropsType } from './types';
 
-import VueIcon from "./techs/VueIcon";
-import AndroidIcon from "./techs/AndroidIcon";
+import techs from './techs';
 
 export default (props: PropsType) => {
   return (
-    <Container testID="techs-container">
-      <VueIcon width={120} height={40} />
-      <AndroidIcon width={120} height={40} />
-      <Label>Teste teste</Label>
-    </Container>
+    <ContainerTechs testID="techs-container">
+      {techs.map((item: any, index: number) => (
+        <ContentTech key={index}>
+          <item.component width={120} height={40} />
+          <Label>{item.name}</Label>
+        </ContentTech>
+      ))}
+    </ContainerTechs>
   );
 };

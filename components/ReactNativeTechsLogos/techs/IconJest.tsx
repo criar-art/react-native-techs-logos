@@ -3,7 +3,7 @@ import Svg, { SvgProps, Path } from "react-native-svg"
 const SvgComponent = (props: SvgProps) => (
   <Svg
     preserveAspectRatio="xMidYMid"
-    viewBox="-13.5 0 283 283"
+    viewBox="0 0 283 283"
     {...props}
   >
     <Path

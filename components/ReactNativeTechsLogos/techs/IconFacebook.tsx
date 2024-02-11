@@ -2,7 +2,7 @@ import Svg, { SvgProps, Path } from "react-native-svg"
 
 const SvgComponent = (props: SvgProps) => (
   <Svg
-    viewBox="-204.8 0 1774 1407"
+    viewBox="-90 0 1774 1407"
     {...props}
   >
     <Path

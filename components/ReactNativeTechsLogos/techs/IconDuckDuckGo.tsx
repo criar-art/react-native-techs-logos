@@ -4,7 +4,7 @@ const SvgComponent = (props: SvgProps) => (
   <Svg
     fill="#fff"
     aria-label="DuckDuckGo"
-    viewBox="-128 -128 256 256"
+    viewBox="-40 -128 256 256"
     {...props}
   >
     <Circle r={108} fill="#d53" />

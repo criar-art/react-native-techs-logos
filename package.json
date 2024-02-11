@@ -2,6 +2,11 @@
   "name": "react-native-techs-logos",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
+  "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
+  "repository": "https://github.com/criar-art/react-native-techs-logos",
+  "bugs": {
+    "url": "https://github.com/criar-art/react-techs-native-logos/issues"
+  },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

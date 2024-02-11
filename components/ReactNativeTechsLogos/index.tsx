@@ -1,6 +1,4 @@
-import { FlatList } from 'react-native';
-
-import { ContainerTechs, ContentTech, Label } from './styled';
+import { ContainerTechs, ListTechs, ContentTech, Label } from './styled';
 import { PropsType } from './types';
 import techs from './techs';
 
@@ -14,13 +12,15 @@ export default (props: PropsType) => {
 
   return (
     <ContainerTechs testID="techs-container">
-      <FlatList
+      <ListTechs
         data={techs}
         renderItem={renderItem}
         horizontal={false}
         keyExtractor={(item: any) => item.name}
         showsHorizontalScrollIndicator={false}
         numColumns={2}
+        contentContainerStyle={{ gap: 10 }}
+        columnWrapperStyle={{ gap: 10 }}
       />
     </ContainerTechs>
   );

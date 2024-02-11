@@ -10,9 +10,12 @@ export const ContainerTechs = styled.View`
   flex: 1;
 `;
 
+export const ListTechs = styled.FlatList`
+  padding: 0px 10px 10px;
+`;
+
 export const ContentTech = styled.View`
   background: #eee;
-  margin: 5px;
   border-radius: 10px;
   display: flex;
   justify-content: center;

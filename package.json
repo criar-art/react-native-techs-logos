@@ -7,6 +7,7 @@
   "bugs": {
     "url": "https://github.com/criar-art/react-techs-native-logos/issues"
   },
+  "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -35,5 +36,12 @@
     "ts-jest": "^29.1.2",
     "typescript": "^5.3.3"
   },
-  "private": true
+  "jest": {
+    "preset": "@testing-library/react-native",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
+    "snapshotFormat": {
+      "printBasicPrototype": false
+    }
+  }
 }

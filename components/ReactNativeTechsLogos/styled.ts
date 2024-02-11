@@ -1,6 +1,14 @@
 import styled from "styled-components/native";
 
-export const ContainerTechs = styled.View``;
+export const ContainerTechs = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+`;
 
 export const ContentTech = styled.View`
   background: #eee;
@@ -11,6 +19,7 @@ export const ContentTech = styled.View`
   align-items: center;
   width: 100px;
   height: 100px;
+  flex: 1;
 `;
 
 export const Label = styled.Text`

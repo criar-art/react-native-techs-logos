@@ -13,7 +13,7 @@ export const ContainerTechs = styled.View`
 export const ContentTech = styled.View`
   background: #eee;
   margin: 5px;
-  border-radius: 100px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -3,4 +3,6 @@ export type PropsType = {
   list?: any;
   hiddenLogos?: any;
   hiddenLabel?: boolean;
+  background?: string;
+  size?: number;
 }

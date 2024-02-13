@@ -24,14 +24,25 @@ export default (props: PropsType) => {
   }
 
   const renderItem = ({ item }: any) => (
-    <ContentTech key={item.name}>
-      <item.icon width={120} height={40} />
+    <ContentTech
+      key={item.name}
+      single={Boolean(props.name && !props.list)}
+      background={props.background}
+      size={props.size ? props.size : 100}
+    >
+      <item.icon
+        width={props.size ? props.size : 50}
+        height={props.size ? props.size : 50}
+      />
       {!props.hiddenLabel && <Label>{item.name}</Label>}
     </ContentTech>
   );
 
   return (
-    <ContainerTechs testID={`${props.list ? 'techs-container-list' : props.hiddenLogos ? 'techs-container-hiddenLogos' : 'techs-container'}`}>
+    <ContainerTechs
+      testID={`${props.list ? 'techs-container-list' : props.hiddenLogos ? 'techs-container-hiddenLogos' : 'techs-container'}`}
+      single={Boolean(props.name && !props.list)}
+    >
       {(props.name && getTech(props.name) && !props.list) ? (
         renderItem({ item: getTech(props.name) })
       ) : (

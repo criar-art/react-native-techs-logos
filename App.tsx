@@ -19,10 +19,10 @@ export default function App() {
           <ReactNativeTechsLogos name="github" background='#fff' />
 
           <Text style={styles.subTitle}>List Array</Text>
-          <ReactNativeTechsLogos list={['vue','javascript', 'react', 'angular']} background="#fff" />
+          <ReactNativeTechsLogos list={['vue','javascript', 'react', 'angular']} background="#fff" gap={20} />
 
           <Text style={styles.subTitle}>List Full</Text>
-          <ReactNativeTechsLogos background="#fff" />
+          <ReactNativeTechsLogos background="#fff" rounded />
 
           <StatusBar style="light" backgroundColor="#000" />
         </View>

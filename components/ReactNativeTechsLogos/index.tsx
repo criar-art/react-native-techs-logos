@@ -1,6 +1,7 @@
 import { ContainerTechs, ListTechs, ContentTech, Label } from './styled';
 import { PropsType } from './types';
 import techs from './techs';
+import { FlatList } from 'react-native';
 
 export default (props: PropsType) => {
   const getTech = (name: string) => {
@@ -28,11 +29,13 @@ export default (props: PropsType) => {
       key={item.name}
       single={Boolean(props.name && !props.list)}
       background={props.background}
+      rounded={props.rounded}
       size={props.size ? props.size : 100}
+      gap={props.gap ? props.gap : 10}
     >
       <item.icon
-        width={props.size ? props.size : 50}
-        height={props.size ? props.size : 50}
+        width={props.size ? props.size : 40}
+        height={props.size ? props.size : 40}
       />
       {!props.hiddenLabel && <Label>{item.name}</Label>}
     </ContentTech>
@@ -45,17 +48,22 @@ export default (props: PropsType) => {
     >
       {(props.name && getTech(props.name) && !props.list) ? (
         renderItem({ item: getTech(props.name) })
-      ) : (
-        <ListTechs
+      ) : props.flatList ? (
+        <FlatList
+          key="flat-list"
           data={renderList()}
           renderItem={renderItem}
           horizontal={false}
           keyExtractor={(item: any) => item.name}
           showsHorizontalScrollIndicator={false}
           numColumns={2}
-          contentContainerStyle={{ gap: 10 }}
-          columnWrapperStyle={{ gap: 10 }}
+          contentContainerStyle={{ gap: props.gap ? props.gap : 10 }}
+          columnWrapperStyle={{ gap: props.gap ? props.gap : 10 }}
         />
+      ) : (
+        <ListTechs>
+          {renderList().map((item: any) => renderItem({ item: item }))}
+        </ListTechs>
       )}
     </ContainerTechs>
   );

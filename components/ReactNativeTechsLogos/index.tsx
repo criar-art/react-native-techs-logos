@@ -50,7 +50,6 @@ export default (props: PropsType) => {
         renderItem({ item: getTech(props.name) })
       ) : props.flatList ? (
         <FlatList
-          key="flat-list"
           data={renderList()}
           renderItem={renderItem}
           horizontal={false}

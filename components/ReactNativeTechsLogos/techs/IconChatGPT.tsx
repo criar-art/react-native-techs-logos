@@ -4,7 +4,7 @@ const SvgComponent = (props: SvgProps) => (
   <Svg
     fillRule="evenodd"
     clipRule="evenodd"
-    viewBox="3534.07 4435.93 21571.86 21590"
+    viewBox="8434 4435 22571 11590"
     {...props}
   >
     <G fillRule="nonzero">

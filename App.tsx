@@ -24,6 +24,7 @@ export default function App() {
           <Text style={styles.subTitle}>List Full</Text>
           <ReactNativeTechsLogos background="#fff" rounded />
 
+          <Text style={styles.authorTitle}>Author @lucasferreiralimax</Text>
           <StatusBar style="light" backgroundColor="#000" />
         </View>
       </ScrollView>
@@ -54,6 +55,15 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     width: '100%',
+    textAlign: 'center'
+  },
+  authorTitle: {
+    fontSize: 18,
+    color: '#000',
+    marginTop: 20,
+    padding: 20,
+    width: '100%',
+    backgroundColor: '#eee',
     textAlign: 'center'
   },
   logo: {

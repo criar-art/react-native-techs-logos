@@ -2,15 +2,18 @@
 
 A list with logos company and techs
 
-<img alt="A list with logos company and techs screenshot" width="250px" src="https://github.com/criar-art/react-native-techs-logos/blob/master/assets/screen-shoot.png" />
+<img alt="A list with logos company and techs screenshot" width="220px" src="https://raw.githubusercontent.com/criar-art/react-native-techs-logos/master/assets/screen-shoot.png" />
 
-Install
-```js
+## Install
+
+```bash
 npm install --save react-native-techs-logos
+
 ```
 
-Usage basic
-```react
+## Usage basic
+
+```jsx
 import ReactNativeTechsLogs from 'react-native-techs-logos';
 
 // list all logos
@@ -28,4 +31,23 @@ import ReactNativeTechsLogs from 'react-native-techs-logos';
 // Hidden label
 <ReactNativeTechsLogs name="javascript" hiddenLabel />
 <ReactNativeTechsLogs hiddenLabel />
+
+```
+
+## Props of component
+
+Properties to use in the component
+
+```typescript
+type Props = {
+  name?: string;
+  list?: Array<String>;
+  hiddenLogos?: Array<String>;
+  hiddenLabel?: boolean;
+  flatList?: boolean;
+  rounded?: boolean;
+  background?: string;
+  size?: number;
+  gap?: number;
+};
 ```

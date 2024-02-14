@@ -2,7 +2,7 @@
 
 A list with logos company and techs
 
-<img alt="A list with logos company and techs screenshot" width="220px" src="https://raw.githubusercontent.com/criar-art/react-native-techs-logos/master/assets/screen-shoot.png" />
+<img alt="A list with logos company and techs screenshot" width="220px" src="https://raw.githubusercontent.com/criar-art/react-native-techs-logos/master/example/assets/screenshoot.png" />
 
 ## Install
 

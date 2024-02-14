@@ -1,0 +1,91 @@
+import * as React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import {
+  StatusBar as StatusBarReactNative,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+} from 'react-native';
+
+// import ReactNativeTechsLogos from 'react-native-techs-logos';
+import ReactNativeTechsLogos from '../src/index';
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.safe}>
+      <View style={styles.logo}>
+        <ReactNativeTechsLogos name="react" hiddenLabel size={30} />
+        <Text style={styles.title}>react-native-techs-logos</Text>
+      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <Text style={styles.subTitle}>Single Github</Text>
+          <ReactNativeTechsLogos name="github" background="#fff" />
+          <Text style={styles.subTitle}>List Array</Text>
+          <ReactNativeTechsLogos
+            list={['vue', 'javascript', 'react', 'angular']}
+            background="#fff"
+            gap={20}
+          />
+          <Text style={styles.subTitle}>List Full</Text>
+          <ReactNativeTechsLogos background="#fff" rounded />
+          <Text style={styles.authorTitle}>Author @lucasferreiralimax</Text>
+          <StatusBar style="light" backgroundColor="#000" />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  safe: {
+    flex: 1,
+    marginTop: StatusBarReactNative.currentHeight || 0,
+  },
+  container: {
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 20,
+    color: '#fff',
+    marginLeft: 10,
+  },
+  subTitle: {
+    fontSize: 20,
+    color: '#000',
+    margin: 10,
+    marginBottom: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    width: '100%',
+    textAlign: 'center',
+  },
+  authorTitle: {
+    fontSize: 18,
+    color: '#000',
+    marginTop: 20,
+    padding: 20,
+    width: '100%',
+    backgroundColor: '#eee',
+    textAlign: 'center',
+  },
+  logo: {
+    height: 50,
+    padding: 10,
+    backgroundColor: '#222',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 8,
+    },
+    shadowOpacity: 0.46,
+    shadowRadius: 11.14,
+    elevation: 17,
+  },
+});

@@ -1,7 +1,7 @@
 import Svg, { type SvgProps, Path } from 'react-native-svg';
 
 const SvgComponent = (props: SvgProps) => (
-  <Svg preserveAspectRatio="xMidYMid" viewBox="-18 0 361 361" {...props}>
+  <Svg preserveAspectRatio="xMidYMid" viewBox="-50 0 361 361" {...props}>
     <Path
       fill="#264DE4"
       d="M127.844 360.088 23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962Z"

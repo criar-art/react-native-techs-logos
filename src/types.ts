@@ -1,3 +1,5 @@
+import type { SvgProps } from 'react-native-svg';
+
 export type Props = {
   name?: string;
   list?: any;
@@ -20,4 +22,10 @@ export type PropsContentTech = {
   size?: number;
   gap?: number;
   background?: string;
+};
+
+export type TechType = {
+  name: string;
+  url: string;
+  icon: (props: SvgProps) => JSX.Element;
 };

@@ -1,23 +1,24 @@
 import React from 'react';
-import { ContainerTechs, ListTechs, ContentTech, Label } from './styled';
-import type { Props } from './types';
-import techs from './techs';
 import { FlatList } from 'react-native';
+
+import { ContainerTechs, ListTechs, ContentTech, Label } from './styled';
+import type { Props, TechType } from './types';
+import techs from './techs';
 
 export default (props: Props) => {
   const getTech = (name: string) => {
     return techs.find((item) => item.name.toLowerCase() === name.toLowerCase());
   };
 
-  const getTechs = (items: any) =>
+  const getTechs = (items: Array<TechType>) =>
     techs.filter((tech) =>
       items.find((item: any) => {
         return tech.name.toLowerCase() === item.toLowerCase();
       })
     );
 
-  const hiddenTechs = (items: any) =>
-    techs.filter((item) => !items.includes(item.name.toLocaleLowerCase()));
+  const hiddenTechs = (items: Array<TechType>) =>
+    techs.filter((item: any) => !items.includes(item.name.toLocaleLowerCase()));
 
   const renderList = () => {
     if (props.list) {
@@ -67,7 +68,7 @@ export default (props: Props) => {
           data={renderList()}
           renderItem={renderItem}
           horizontal={false}
-          keyExtractor={(item: any) => item.name}
+          keyExtractor={(item: TechType) => item.name}
           showsHorizontalScrollIndicator={false}
           numColumns={2}
           contentContainerStyle={configGap}
@@ -75,7 +76,7 @@ export default (props: Props) => {
         />
       ) : (
         <ListTechs>
-          {renderList().map((item: any) => renderItem({ item: item }))}
+          {renderList().map((item: TechType) => renderItem({ item: item }))}
         </ListTechs>
       )}
     </ContainerTechs>

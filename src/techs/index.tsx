@@ -1,3 +1,5 @@
+import type { TechType } from '../types';
+
 import IconAndroid from './IconAndroid';
 import IconApple from './IconApple';
 import IconHTML from './IconHTML';
@@ -72,7 +74,7 @@ import IconDocker from './IconDocker';
 import IconDiscord from './IconDiscord';
 import IconDigitalOcean from './IconDigitalOcean';
 
-const techs = [
+const techs: Array<TechType> = [
   { name: 'Android', icon: IconAndroid, url: 'https://www.android.com' },
   { name: 'Apple', icon: IconApple, url: 'https://www.apple.com' },
   { name: 'Linux', icon: IconLinux, url: 'https://ubuntu.com' },

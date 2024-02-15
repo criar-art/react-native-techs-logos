@@ -74,7 +74,7 @@ import IconDocker from './IconDocker';
 import IconDiscord from './IconDiscord';
 import IconDigitalOcean from './IconDigitalOcean';
 
-const techs: Array<TechType> = [
+const techs: TechType[] = [
   { name: 'Android', icon: IconAndroid, url: 'https://www.android.com' },
   { name: 'Apple', icon: IconApple, url: 'https://www.apple.com' },
   { name: 'Linux', icon: IconLinux, url: 'https://ubuntu.com' },

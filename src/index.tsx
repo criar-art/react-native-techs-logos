@@ -6,29 +6,27 @@ import type { Props, TechType } from './types';
 import techs from './techs';
 
 export default (props: Props) => {
-  const getTech = (name: string) => {
-    return techs.find((item) => item.name.toLowerCase() === name.toLowerCase());
-  };
+  const getTech = (name: string) =>
+    techs.find((item) => item.name.toLowerCase() === name.toLowerCase());
 
-  const getTechs = (items: Array<TechType>) =>
+  const getTechs = (items: string[]) =>
     techs.filter((tech) =>
-      items.find((item: any) => {
-        return tech.name.toLowerCase() === item.toLowerCase();
-      })
+      items.find(
+        (name: string) => tech.name.toLowerCase() === name.toLowerCase()
+      )
     );
 
-  const hiddenTechs = (items: Array<TechType>) =>
-    techs.filter((item: any) => !items.includes(item.name.toLocaleLowerCase()));
+  const hiddenTechs = (items: string[]) =>
+    techs.filter(
+      ({ name }: TechType) => !items.includes(name.toLocaleLowerCase())
+    );
 
-  const renderList = () => {
-    if (props.list) {
-      return getTechs(props.list);
-    } else if (props.hiddenLogos) {
-      return hiddenTechs(props.hiddenLogos);
-    } else {
-      return techs;
-    }
-  };
+  const renderList = () =>
+    props.list
+      ? getTechs(props.list)
+      : props.hiddenLogos
+      ? hiddenTechs(props.hiddenLogos)
+      : techs;
 
   const renderItem = ({ item }: any) => (
     <ContentTech

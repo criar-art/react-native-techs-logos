@@ -1,6 +1,6 @@
 {
   "name": "react-native-techs-logos-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "node_modules/expo/AppEntry.js",
   "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
   "repository": "https://github.com/criar-art/react-native-techs-logos",
@@ -20,7 +20,7 @@
     "react": "18.2.0",
     "react-native": "0.73.4",
     "react-native-svg": "14.1.0",
-    "react-native-techs-logos": "^0.1.2",
+    "react-native-techs-logos": "^0.1.4",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {

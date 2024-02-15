@@ -1,9 +1,8 @@
 import styled from 'styled-components/native';
+import type { PropsContainerTechs, PropsContentTech } from './types';
 
-export const ContainerTechs = styled.View<{
-  single?: boolean;
-}>`
-  ${({ single }: any) =>
+export const ContainerTechs = styled.View<PropsContainerTechs>`
+  ${({ single }: PropsContainerTechs) =>
     !single &&
     `
     justify-content: center;
@@ -23,21 +22,17 @@ export const ListTechs = styled.View`
   flex: 1;
 `;
 
-export const ContentTech = styled.View<{
-  single?: boolean;
-  rounded?: boolean;
-  size?: number;
-  gap?: number;
-  background?: string;
-}>`
+export const ContentTech = styled.View<PropsContentTech>`
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  ${({ single, gap }: any) => !single && `margin: ${gap}px;`};
-  ${({ rounded }: any) => rounded && 'border-radius: 100px;'};
-  ${({ size }: any) => (size ? `width: ${size}px;` : 'width: 100px;')};
-  ${({ size }: any) => (size ? `height: ${size}px;` : 'height: 100px;')};
-  ${({ background }: any) =>
+  ${({ single, gap }: PropsContentTech) => !single && `margin: ${gap}px;`};
+  ${({ rounded }: PropsContentTech) => rounded && 'border-radius: 100px;'};
+  ${({ size }: PropsContentTech) =>
+    size ? `width: ${size}px;` : 'width: 100px;'};
+  ${({ size }: PropsContentTech) =>
+    size ? `height: ${size}px;` : 'height: 100px;'};
+  ${({ background }: PropsContentTech) =>
     background &&
     `
     background: ${background};

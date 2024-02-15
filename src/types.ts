@@ -9,3 +9,15 @@ export type Props = {
   size?: number;
   gap?: number;
 };
+
+export type PropsContainerTechs = {
+  single?: boolean;
+};
+
+export type PropsContentTech = {
+  single?: boolean;
+  rounded?: boolean;
+  size?: number;
+  gap?: number;
+  background?: string;
+};

@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucasferreiralimax/react-native-techs-logos.git"
+    "url": "git+https://github.com/criar-art/react-native-techs-logos.git"
   },
   "author": "lucasferreiralimax <lucasferreiralimax@gmail.com> (https://github.com/lucasferreiralimax)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lucasferreiralimax/react-native-techs-logos/issues"
+    "url": "https://github.com/criar-art/react-native-techs-logos/issues"
   },
-  "homepage": "https://github.com/lucasferreiralimax/react-native-techs-logos#readme",
+  "homepage": "https://github.com/criar-art/react-native-techs-logos#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -88,9 +88,6 @@
     "react-native": "*",
     "react-native-svg": "*"
   },
-  "workspaces": [
-    "example"
-  ],
   "packageManager": "yarn@3.6.1",
   "engines": {
     "node": ">= 18.0.0"

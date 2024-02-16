@@ -2,8 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { ScrollView } from 'react-native';
 
 // Package from NPM public
-// import ReactNativeTechsLogos from 'react-native-techs-logos';
-import ReactNativeTechsLogos from '../src/index';
+import ReactNativeTechsLogos from 'react-native-techs-logos';
+// Package from folder
+// import ReactNativeTechsLogos from '../src/index';
+
 import { SafeArea, Container, Header, Title, SubTitle, Author } from './styled';
 
 const App = () => (

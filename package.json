@@ -1,6 +1,6 @@
 {
   "name": "react-native-techs-logos",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "list of logos company and techs",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

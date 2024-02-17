@@ -2,8 +2,8 @@ import type { SvgProps } from 'react-native-svg';
 
 export type Props = {
   name?: string;
-  list?: any;
-  hiddenLogos?: any;
+  list?: string[];
+  hiddenLogos?: string[];
   hiddenLabel?: boolean;
   flatList?: boolean;
   rounded?: boolean;

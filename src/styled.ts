@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import styled from 'styled-components/native';
 import type { PropsContainerTechs, PropsContentTech } from './types';
 
@@ -36,11 +37,19 @@ export const ContentTech = styled.View<PropsContentTech>`
     background &&
     `
     background: ${background};
-    shadow-opacity: 0.4;
-    shadow-radius: 2px;
-    shadow-color: #000;
-    shadow-offset: 0px 8px;
-    elevation: 4;
+    ${
+      Platform.OS === 'ios'
+        ? `
+      box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.1);
+    `
+        : `
+      shadow-opacity: 0.4;
+      shadow-radius: 2px;
+      shadow-color: #000;
+      shadow-offset: 0px 8px;
+      elevation: 4;
+    `
+    }
   `};
 `;
 

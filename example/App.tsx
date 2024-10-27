@@ -18,6 +18,8 @@ const App = () => (
       <Container>
         <SubTitle>Single Github</SubTitle>
         <ReactNativeTechsLogos name="github" background="#fff" />
+        <SubTitle>Single Raw Github</SubTitle>
+        <ReactNativeTechsLogos name="github" background="#fff" raw />
         <SubTitle>List Array</SubTitle>
         <ReactNativeTechsLogos
           list={['vue', 'javascript', 'react', 'angular']}

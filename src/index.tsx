@@ -43,6 +43,7 @@ export default (props: Props) => {
   const renderItemRaw = ({ item }: { item: TechType }) => (
     <item.icon
       key={item.name}
+      testID={`icon-${item.name.toLocaleLowerCase()}`}
       width={props.size || 40}
       height={props.size || 40}
     />

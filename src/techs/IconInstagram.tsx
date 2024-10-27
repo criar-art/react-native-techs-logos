@@ -10,7 +10,6 @@ const SvgComponent = (props: SvgProps) => (
   <Svg viewBox="0 0 132.004 132" {...props}>
     <Defs>
       <RadialGradient
-        xlinkHref="#a"
         id="c"
         cx={158.429}
         cy={578.088}
@@ -21,7 +20,6 @@ const SvgComponent = (props: SvgProps) => (
         gradientUnits="userSpaceOnUse"
       />
       <RadialGradient
-        xlinkHref="#b"
         id="d"
         cx={147.694}
         cy={473.455}

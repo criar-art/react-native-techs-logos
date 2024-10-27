@@ -10,6 +10,7 @@ export type Props = {
   background?: string;
   size?: number;
   gap?: number;
+  raw?: boolean;
 };
 
 export type PropsContainerTechs = {

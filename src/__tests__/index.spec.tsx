@@ -94,3 +94,15 @@ test('should render props of component list', () => {
   expect(props.style.marginRight).toBe(50);
   expect(props.style.marginBottom).toBe(50);
 });
+
+test('should render icons only when raw is true', () => {
+  const { queryByTestId, getByTestId, queryByText } = render(
+    <ReactNativeTechsLogos raw={true} list={['react', 'jest']} />
+  );
+
+  expect(queryByTestId('techs-container')).toBeNull();
+  expect(getByTestId('icon-react')).toBeTruthy();
+  expect(getByTestId('icon-jest')).toBeTruthy();
+  expect(queryByText('React')).toBeNull();
+  expect(queryByText('Jest')).toBeNull();
+});

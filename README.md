@@ -22,6 +22,9 @@ import ReactNativeTechsLogs from 'react-native-techs-logos';
 // single icon
 <ReactNativeTechsLogs name="javascript" />
 
+// Raw mode
+<ReactNativeTechsLogs name="javascript" raw />
+
 // list limited logos
 <ReactNativeTechsLogs list={['vue','javascript', 'react', 'angular']} />
 
@@ -49,5 +52,6 @@ type Props = {
   background?: string;
   size?: number;
   gap?: number;
+  raw?: boolean;
 };
 ```
